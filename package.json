@@ -1,0 +1,12 @@
+{
+  "name": "sborka",
+  "description": "",
+  "private": true,
+  "scripts": {},
+  "author": "Astghik",
+  "dependencies": {
+    "navigo": "^8.11.1",
+    "parcel": "^2.9.3",
+    "redom": "^3.29.1"
+  }
+}

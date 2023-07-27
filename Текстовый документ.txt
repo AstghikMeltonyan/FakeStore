@@ -1,0 +1,92 @@
+------------ npm init -y (stexcvum a package.json(lyuboy projecti sirtn a))
+
+{
+  "name": "sborka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+bayc sa default a vor gnalu a npm, mez petq a brouzerum bacelu hamar mi qich popoxutyunner kanenq
+
+{
+  "name": "sborka",
+  "description": "",  (stex kgrenq projecti nkaragrutyune)
+  "private": true,
+  "scripts": { },
+  "author": "Astghik"
+} (u mez petq a kaxvacutyunnere dranq en ustanovkanern en voronq kapelu enq npm instal kam npm i hramannerov)
+
+Vorpeszi unenanq apranqneri cucak, petq a zaprasut anenq API-ic, ed spisoke generacnel ev texadrenq DOM cari vra. Anel da document createElementov, class er dnel ed shat jamanakatar a.
+ed xndire lucelu hamar kogtvenq gradaranic vore kochvum a  redom  https://redom.js.org/.U grum enq hramane
+
+------------  npm i redom 
+
+yete amen inch normal a yntacel, mer package.jsonum kavelana dependencies(kaxvacutyunner) 
+
+"dependencies": {
+    "redom": "^3.29.1"
+  }
+ev nodemodules papkan
+
+Qani vor import exporte ne podderjivaetsya node koxmic, petq a unenal sepakan sborkayi sisteman, u da noric petq a ustanavit anenq.
+Drancic a parcel(sa ammenataracvace chi amenaparzn a, isk amenataracvace webpackn a) Kgrenq hraman
+------------  npm i parcel
+
+u dependencies(kaxvacutyunner) bajnum kavelana parcele
+
+"dependencies": {
+    "parcel": "^2.9.3",
+    "redom": "^3.29.1"
+  }
+
+inchpes bolor sborshiknere,parceli nuynpes avelacnum a server dly razrabotki,u kamanda tipa serve el petq chi ustanavit anel, vorovhetev parcele mez kapum a serveri het
+Hajord qayle index.htmli ev src papkayi(index.js-ov) stexcumn a
+Heto inch vor grecinq iranc zapustit anelu hamar grum enq hraman 
+
+------------ npx parcel index.html (npx nra hamar a vor mer projectov papakayi mej zapusk lini, voch te global)
+
+yete amen inch normal a terminalum stanum enq
+
+Server runing at localhost1234
+Bulit in 00ms
+
+Ev hima vor nor ejov bacenq localhost:1234 kbacvi mer eje
+Hima vorpeszi unenanq apranqneri cank mez petq a fake API 
+https://fakestoreapi.com/ 
+
+Ka gradaran, prostoy router navigo vore aranc avelord kaxvacutyunneri mez kta productneri navigacia, bayc piti ustonavit anenq
+https://www.npmjs.com/package/navigo
+------------  npm i navigo
+
+hajord qaylov import enq anum Navigon, vore uni ira partadir qaylere js-i papkayum
+
+const router = new Navigo('/');
+router.on('/', () => {
+  // do something
+});
+router.resolve();
+
+Es amen inchic heto, vor uzum enq havaqel mer projecte grum enq hraman
+------------  npx parcel build index.html
+
+u haytnvum a mer projecti dist papkan, vorum havaqvac a mer amboxj projecte
+
+menq stacanq espes asac SPA (single page aplication) u vor haskananq lriv chisht a u vonc ashxatenq hete. 
+Dra hamar grum enq hraman
+serve --help
+
+vor haskananq ka optia dlya zapuska programmi v rejime SPA
+Optionsi mej gtnum enq 
+-s, --single (vorn asum a Rewrite all not-found requests to `index.html`) es pahin sa e mez petq
+
+disti aravelutyune en a, vor menq server karanq uxarkenq menak iran u mer projecte kashxati
+Pordzelu hamar gnum enq papka dist 
+--------- cd dist hramanov
+u ed papakayum grum hraman 
+------------  serve -s 
